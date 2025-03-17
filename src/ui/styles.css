@@ -1,0 +1,173 @@
+/* Main styles for Solar System Simulator */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0a14;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(10, 10, 20, 0.7);
+  border-bottom: 1px solid #2d2d3a;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+button {
+  background-color: #3a3a50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #4a4a64;
+}
+
+button:active {
+  background-color: #2a2a3c;
+}
+
+.time-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-controls button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+#time-display {
+  min-width: 100px;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+#scene-container {
+  width: 100%;
+  height: 100%;
+}
+
+#info-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: rgba(10, 10, 20, 0.8);
+  border: 1px solid #2d2d3a;
+  border-radius: 4px;
+  padding: 15px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+#info-panel.hidden {
+  transform: translateX(320px);
+  opacity: 0;
+}
+
+#object-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2d2d3a;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(10, 10, 20, 0.7);
+  border-top: 1px solid #2d2d3a;
+}
+
+.status {
+  display: flex;
+  gap: 15px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.lagrange-points-control {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(10, 10, 20, 0.8);
+  border: 1px solid #2d2d3a;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lagrange-points-select {
+  background-color: #2a2a3c;
+  color: white;
+  border: 1px solid #3d3d52;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.lagrange-points-toggle {
+  padding: 5px 10px;
+}
+
+.lagrange-points-toggle.active {
+  background-color: #4a6a9c;
+}
+
+.help-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3a3a50;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
